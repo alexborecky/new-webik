@@ -51,7 +51,7 @@
         </div>
         <hr>
         <div class="description">
-          <p>An award winning director and actor Alexandr Borecky, currently based in Prague is starting to make his way to the industry despite his family's non-artistic background. His debut as a director and producer can be seen in his short film Origin, with which he has won several awards and now follows up with another project Untold Pieces which is planned to be released in late 2022.</p>
+          <p>Award winning director and actor Alexandr Borecky, currently based in Prague is starting to make his way to the industry despite his family's non-artistic background. His debut as a director and producer can be seen in his short film Origin, with which he has won several awards and now follows up with another project Untold Pieces which is planned to be released in late 2022.</p>
           <a class="close-button" @click="aboutModal ()">Read more</a>
         </div>
       </div>
@@ -68,7 +68,10 @@
           description="After learning about his mother's death, Casey is left with feelings of guilt and confusion as he finds himself relieved about the news. With his friend Jenny, he is trying to find out what is an appropriate reaction to someone's death."
         />
         <!-- <div class="close-cover" @click="untoldModal ()"></div> -->
-        <a class="modal-close" @click="untoldModal ()">CLOSE INFO</a>
+        <a class="modal-close flex center" @click="untoldModal ()"><svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25 7L7 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M25 25L7 7" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>CLOSE INFO</a>
         </div>
         <div class="modal flex middle column" v-if="oriModal">
         <filmWindow id="origin"
@@ -81,20 +84,23 @@
           description="Three friends, that had known each other since they were little kids, have decided to spend a night out together. Leo, a person that relies heavily on their friendship, is realising how much he has been lacking behind in his life when he sees his how much his friends grew as people, outside their little circle. This makes Leo reconsider his approach to life and also makes him think about how much relying on the friendship has hold him back."
         />
         <!-- <div class="close-cover" @click="originModal ()"></div> -->
-        <a class="modal-close" @click="originModal ()">CLOSE INFO</a>
+        <a class="modal-close flex center" @click="originModal ()"><svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25 7L7 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M25 25L7 7" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>CLOSE INFO</a>
         </div>
 
-      <div class="modal flex middle" v-if="modal">
+      <div class="modal flex middle column" v-if="modal">
         <div class="modal-window flex column" id="bio">
           <h2>Biography</h2>
             <p>An award winning director and actor Alexandr Borecky, currently based in Prague is starting to make his way to the industry despite his family's non-artistic background. His debut as a director and producer can be seen in his short film Origin, with which he has won several awards and now follows up with another project Untold Pieces which is planned to be released in late 2022. <br> Alexandr Borecky was born Czech Republic, and raised in Prague, where he is working on several projects as actor, writer and director. He first encountered acting during drama classes in high school. After few small school productions, Alexandr moved to Atlanta at the age of 17 where he first encountered musical theatre and had a chance to perform in productions such as Les Misérables, Mamma Mia and Grease.<br>While studying at Charles University Alexandr took classes of theatrical improvisation. That's where he was offered to study at Prague Conservatory of Acting which he eventually refused and continued at Charles University. He left the university three years later, started a proper theatrical training and decided to pursue acting as a career. During this stage of the training he was able to take part in few theatrical productions in Prague. <br> In 2017 he moved to Los Angeles to get a proper on-camera acting training which he received in form of individual classes. After further consideration, research and interviews he decided to adopt a method technique for his future work, following the footsteps of his role models Daniel Day-Lewis, Javier Bardem or Joaquin Phoenix.</p>
-            <a class="flex middle close" @click="aboutModal()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 6L6 18M6 6L18 18" stroke="red" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Zavřít
-            </a>
+            
         </div>
+        <a class="modal-close flex middle close" @click="aboutModal()">
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25 7L7 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M25 25L7 7" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>CLOSE INFO</a>
       </div>
     </div>
   </div>
@@ -248,9 +254,14 @@ export default {
   .film-row {
     justify-content: space-between;
     height: 350px;
+    @media (max-width: 1680px) {
+        height: 24vh;
+    }
     .thumb-snap {
       width: 40%;
+      border-radius: 8px;
       cursor: pointer;
+      height: 100%;
     }
   }
   .more-teaser {
@@ -268,9 +279,9 @@ export default {
   max-height: 700px !important;
   min-height: none !important;
   margin: 80px 0;
+  justify-content: space-between;
   .main-section, .description {
-    width: 50%;
-    margin: 0 40px;
+    width: 45%;
   }
   hr {
     opacity: .24;
@@ -310,6 +321,9 @@ export default {
     left: 0;
     height: 100vh !important;
     width: 100%;
+    p {
+      opacity: .8;
+    }
     .close-cover {
       width: 100%;
       height: 100%;
@@ -336,6 +350,16 @@ export default {
   .modal-close {
     margin: 24px !important;
     cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: white;
+    transition: .2s ease-in;
+    svg {
+      margin-right: 8px;
+    }
+    &:hover {
+      opacity: .64;
+    }
   }
   @media only screen and (max-width: 1024px) {
       .modal-window {

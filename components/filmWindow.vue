@@ -81,6 +81,14 @@
                 border-radius: 8px;
                 text-decoration: none;
                 font-weight: 600;
+                transition: .1s ease-in;
+                border: 1px solid white;
+                &:hover {
+                    background-color: transparent;
+                    border-radius: 8px;
+                    border: solid 1px rgba($color: #fff, $alpha: .24);
+                    color: white;
+                }
             }
         }
     }

@@ -22,14 +22,14 @@
 
 .film-thumbnail {
     border-radius: 8px;
-    height: 350px;
+    height: 100%;
     width: 100%;
     background-size: cover;
     background-position: center;
     flex-flow: column;
     justify-content: flex-end;
     position: relative;
-    transition: .3s ease-in;
+    transition: .2s ease-in;
     .film-toolbar {
         margin: 32px;
         z-index: 100;
@@ -58,7 +58,7 @@
         }
     }
     &:hover {
-        transform: translateY(-8px);
+        transform: translateY(-4px) scale(1.01);
     }
     .cover {
         width: 100%;
@@ -67,6 +67,7 @@
         top: 0;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
         transition: .3s ease-in;
+        border-radius: 8px;
     }
 }
 
