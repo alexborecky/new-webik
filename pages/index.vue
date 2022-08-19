@@ -81,7 +81,6 @@
           year="2022"
           description="After learning about his mother's death, Casey is left with feelings of guilt and confusion as he finds himself relieved about the news. With his friend Jenny, he is trying to find out what is an appropriate reaction to someone's death."
         />
-        <v-dialog v-model="modal" @keydown.esc="modal = false"></v-dialog>
         <!-- <div class="close-cover" @click="untoldModal ()"></div> -->
         <a class="modal-close flex center" @click="untoldModal ()">
         <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
