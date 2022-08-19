@@ -22,13 +22,14 @@
             <div class="hr-line"></div>
         </div>
       </div>
+
       <div class="films hero flex column" id="films">
         <h2>Films to watch</h2>
         <div class="film-row flex">
           <a @click="untoldModal ()" class="thumb-snap">
           <filmThumbnail class="untold-pieces" 
             filmTitle="Untold Pieces"
-            thumbnail="https://ik.imagekit.io/alexborecky/personal_web/webThumbnails-min_FvO-MlR8t.png?ik-sdk-version=javascript-1.4.3&updatedAt=1659616776323"
+            thumbnail="https://ik.imagekit.io/alexborecky/personal_web/Full_HD-min_96VrddI2e.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660911454350"
             status="Coming 2022"
           />
           </a>
@@ -44,6 +45,7 @@
           </div>
         </div>
       </div>
+
       <div class="about flex" id="about">
         <div class="main-section">
           <h2>Alexandr Borecky</h2>
@@ -52,14 +54,26 @@
         <hr>
         <div class="description">
           <p>Award winning director and actor Alexandr Borecky, currently based in Prague is starting to make his way to the industry despite his family's non-artistic background. His debut as a director and producer can be seen in his short film Origin, with which he has won several awards and now follows up with another project Untold Pieces which is planned to be released in late 2022.</p>
-          <a class="close-button" @click="aboutModal ()">Read more</a>
+          <a class="close-button" target="_blank" href="https://www.imdb.com/name/nm8879254/?ref_=tt_cl_t_2">Read whole bio</a>
         </div>
+      </div>
+
+      <div class="contact flex column middle" id="contact">
+        <div class="statement flex column center">
+          <h2>Contacts</h2>
+          <p>Looking for a director or a producer? Let's chat!</p>
+        </div>
+        <ul class="flex">
+          <li><a target="_blank" href="https://www.instagram.com/alex.borecky/">Instagram</a></li>
+        </ul>
+        <p><small>For representation and other business inquiries, please contact me via email boreckyalex@gmail.com</small></p>
       </div>
     </div>
     <div class="modals">
+      <!-- UNTOLD PIECES -->
         <div class="modal flex middle column" v-if="piecesModal">
         <filmWindow id="untold-pieces"
-          thumbnail="https://ik.imagekit.io/alexborecky/personal_web/webThumbnails-1-min_v2zVayYCw.png?ik-sdk-version=javascript-1.4.3&updatedAt=1659616776863"
+          thumbnail="https://ik.imagekit.io/alexborecky/personal_web/Full_HD-min_96VrddI2e.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660911454350"
           filmTitle="Untold Pieces"
           filmLink=""
           actionLine="Coming 2022"
@@ -67,12 +81,17 @@
           year="2022"
           description="After learning about his mother's death, Casey is left with feelings of guilt and confusion as he finds himself relieved about the news. With his friend Jenny, he is trying to find out what is an appropriate reaction to someone's death."
         />
+        <v-dialog v-model="modal" @keydown.esc="modal = false"></v-dialog>
         <!-- <div class="close-cover" @click="untoldModal ()"></div> -->
-        <a class="modal-close flex center" @click="untoldModal ()"><svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M25 7L7 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M25 25L7 7" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>CLOSE INFO</a>
+        <a class="modal-close flex center" @click="untoldModal ()">
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M25 7L7 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M25 25L7 7" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+          CLOSE INFO
+        </a>
         </div>
+        <!-- ORIGIN -->
         <div class="modal flex middle column" v-if="oriModal">
         <filmWindow id="origin"
           thumbnail="https://ik.imagekit.io/alexborecky/personal_web/1000x563-min_FfsKVX7ac.png?ik-sdk-version=javascript-1.4.3&updatedAt=1659616805474"
@@ -93,8 +112,7 @@
       <div class="modal flex middle column" v-if="modal">
         <div class="modal-window flex column" id="bio">
           <h2>Biography</h2>
-            <p>An award winning director and actor Alexandr Borecky, currently based in Prague is starting to make his way to the industry despite his family's non-artistic background. His debut as a director and producer can be seen in his short film Origin, with which he has won several awards and now follows up with another project Untold Pieces which is planned to be released in late 2022. <br> Alexandr Borecky was born Czech Republic, and raised in Prague, where he is working on several projects as actor, writer and director. He first encountered acting during drama classes in high school. After few small school productions, Alexandr moved to Atlanta at the age of 17 where he first encountered musical theatre and had a chance to perform in productions such as Les Misérables, Mamma Mia and Grease.<br>While studying at Charles University Alexandr took classes of theatrical improvisation. That's where he was offered to study at Prague Conservatory of Acting which he eventually refused and continued at Charles University. He left the university three years later, started a proper theatrical training and decided to pursue acting as a career. During this stage of the training he was able to take part in few theatrical productions in Prague. <br> In 2017 he moved to Los Angeles to get a proper on-camera acting training which he received in form of individual classes. After further consideration, research and interviews he decided to adopt a method technique for his future work, following the footsteps of his role models Daniel Day-Lewis, Javier Bardem or Joaquin Phoenix.</p>
-            
+            <p>An award winning director and actor Alexandr Borecky, currently based in Prague is starting to make his way to the industry despite his family's non-artistic background. His debut as a director and producer can be seen in his short film Origin, with which he has won several awards and now follows up with another project Untold Pieces which is planned to be released in late 2022. <br> Alexandr Borecky was born Czech Republic, and raised in Prague, where he is working on several projects as actor, writer and director. He first encountered acting during drama classes in high school. After few small school productions, Alexandr moved to Atlanta at the age of 17 where he first encountered musical theatre and had a chance to perform in productions such as Les Misérables, Mamma Mia and Grease.<br>While studying at Charles University Alexandr took classes of theatrical improvisation. That's where he was offered to study at Prague Conservatory of Acting which he eventually refused and continued at Charles University. He left the university three years later, started a proper theatrical training and decided to pursue acting as a career. During this stage of the training he was able to take part in few theatrical productions in Prague. <br> In 2017 he moved to Los Angeles to get a proper on-camera acting training which he received in form of individual classes. After further consideration, research and interviews he decided to adopt a method technique for his future work, following the footsteps of his role models Daniel Day-Lewis, Javier Bardem or Joaquin Phoenix.</p>         
         </div>
         <a class="modal-close flex middle close" @click="aboutModal()">
         <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,8 +159,10 @@ export default {
             modal: false,
             piecesModal: false,
             oriModal: false,
+            dialog: false
         }
     },
+    
 }
 </script>
 
@@ -233,6 +253,46 @@ export default {
         }
       }
     }
+    @media (max-width: 500px) {
+      flex-flow: column;
+      .name {
+        margin-top: 40px;
+        height: auto;
+        flex-flow: column;
+        h1, .image {
+          position: relative;
+        }
+        .image {
+          height: 50vh;
+          width: 100%;
+          margin: 16px 0;
+        }
+        h1 {
+          font-size: 48px;
+          left: 0;
+          letter-spacing: 4px;
+        }
+      }
+      .links {
+        position: relative;
+        display: flex;
+        height: auto;
+        width: 100%;
+        justify-content: space-between;
+        a {
+          position: relative;
+          top: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          .line {
+            display: none !important;
+          }
+        }
+        .hr-line {
+          display: none;
+        }
+      }
+    }
 }
 
 .films {
@@ -273,6 +333,21 @@ export default {
       opacity: .56;
     }
   }
+  @media (max-width: 550px) {
+    .film-row {
+      flex-flow: column;
+      height: auto;
+      .thumb-snap {
+        width: 100% !important;
+        margin: 16px 0;
+        height: 200px;
+      }
+      .more-teaser {
+        width: 100%;
+        height: 100px;
+      }
+    }
+  }
 }
 
 .about {
@@ -309,6 +384,37 @@ export default {
       text-align: left;
       opacity: .8;
     }
+    .close-button {
+      background-color: rgba($color: #fff, $alpha: .16) !important; 
+      color: #fff !important;
+      font-weight: 700 !important;
+    }
+  }
+  @media (max-width: 550px) {
+    flex-flow: column;
+    max-height: none !important;
+    .main-section, .description {
+      width: 100%;
+    }
+    .main-section {
+      img {
+        margin-top: 24px;
+      }
+      h2 {
+        font-size: 40px;
+      }
+    }
+    hr {
+      display: none;
+    }
+    .description {
+      p {
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 1px;
+        margin: 16px 0;
+      }
+    }
   }
 }
 
@@ -339,7 +445,7 @@ export default {
       width: 70%;
       padding: 40px;
       background-color: black;
-      border-radius: 8px;
+      border-radius: 16px;
       z-index: 10000 !important;
       p {
           margin: 8px 0;
@@ -399,6 +505,14 @@ export default {
   }
 }
 
+#bio {
+  p {
+    font-size: 20px;
+    line-height: 40px;
+    opacity: .8;
+  }
+}
+
 .close-button {
   padding: 8px 16px;
   background-color: transparent !important;
@@ -409,6 +523,40 @@ export default {
   font-weight: 400;
   width: 160px;
   text-align: center;
+}
+
+.contact {
+  height: 50vh;
+  h2 {
+    font-size: 40px;
+    margin: 24px 0;
+    letter-spacing: 4px;
+  }
+  p {
+    opacity: .8;
+    font-size: 16px;
+    letter-spacing: 1px;
+    small {
+      opacity: .64;
+    }
+  }
+  ul {
+    padding: 0 !important;
+    margin: 40px;
+    list-style: none;
+    a {
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin: 16px;
+      transition: .3s ease;
+      &:hover {
+        opacity: .4;
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    text-align: center;
+  }
 }
 
 </style>

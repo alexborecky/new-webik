@@ -50,11 +50,11 @@
         top: 0;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
         transition: .3s ease-in;
+        border-radius: 16px 16px 0 0;
     }
 }
 
 .film-window {
-    border-radius: 8px;
     width: 100%;
     flex-flow: column;
     justify-content: flex-end;
@@ -66,6 +66,7 @@
         background-size: cover;
         background-position: center;
         justify-content: flex-end;
+        border-radius: 16px 16px 0 0;
         .film-info {
             z-index: 10006;
             margin: 32px 80px;
@@ -114,6 +115,17 @@
                     font-weight: 400;
                 }
             }
+        }
+    }
+    @media (max-width: 550px) {
+        max-height: 80vh;
+        .thumbnail-section {
+            .film-info {
+                margin: 16px;
+            }
+        }
+        .info-section {
+            padding: 16px;
         }
     }
 }

@@ -69,6 +69,15 @@
         transition: .3s ease-in;
         border-radius: 8px;
     }
+
+    @media (max-width: 550px) {
+        width: 100%;
+        .film-toolbar {
+            margin: 8px 16px;
+        }
+    }
 }
+
+
 
 </style>
