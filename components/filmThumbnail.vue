@@ -73,7 +73,7 @@
     @media (max-width: 550px) {
         width: 100%;
         .film-toolbar {
-            margin: 8px 16px;
+            margin: 8px;
         }
     }
 }
