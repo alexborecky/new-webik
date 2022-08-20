@@ -26,8 +26,8 @@
       <div class="films hero flex column" id="films">
         <h2>Films to watch</h2>
         <div class="film-row flex">
-          <a @click="untoldModal ()" >
-            <filmThumbnail class="untold-pieces thumb-snap" 
+          <a @click="untoldModal ()" class="thumb-snap">
+            <filmThumbnail class="untold-pieces" 
               filmTitle="Untold Pieces"
               thumbnail="https://ik.imagekit.io/alexborecky/personal_web/Full_HD-min_96VrddI2e.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660911454350"
               status="Coming 2022"
@@ -72,7 +72,7 @@
     </div>
     <div class="modals">
       <!-- UNTOLD PIECES -->
-        <div class="modal flex middle column" v-if="piecesModal">
+        <div class="modal flex middle column" v-show="piecesModal">
         <filmWindow id="untold-pieces"
           thumbnail="https://ik.imagekit.io/alexborecky/personal_web/Full_HD-min_96VrddI2e.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660911454350"
           filmTitle="Untold Pieces"
@@ -92,7 +92,7 @@
         </a>
         </div>
         <!-- ORIGIN -->
-        <div class="modal flex middle column" v-if="oriModal">
+        <div class="modal flex middle column" v-show="oriModal">
         <filmWindow id="origin"
           thumbnail="https://ik.imagekit.io/alexborecky/personal_web/1000x563-min_FfsKVX7ac.png?ik-sdk-version=javascript-1.4.3&updatedAt=1659616805474"
           filmTitle="Origin"
@@ -109,7 +109,7 @@
         </svg>CLOSE INFO</a>
         </div>
 
-      <div class="modal flex middle column" v-if="modal">
+      <div class="modal flex middle column" v-show="modal">
         <div class="modal-window flex column" id="bio">
           <h2>Biography</h2>
             <p>An award winning director and actor Alexandr Borecky, currently based in Prague is starting to make his way to the industry despite his family's non-artistic background. His debut as a director and producer can be seen in his short film Origin, with which he has won several awards and now follows up with another project Untold Pieces which is planned to be released in late 2022. <br> Alexandr Borecky was born Czech Republic, and raised in Prague, where he is working on several projects as actor, writer and director. He first encountered acting during drama classes in high school. After few small school productions, Alexandr moved to Atlanta at the age of 17 where he first encountered musical theatre and had a chance to perform in productions such as Les Misérables, Mamma Mia and Grease.<br>While studying at Charles University Alexandr took classes of theatrical improvisation. That's where he was offered to study at Prague Conservatory of Acting which he eventually refused and continued at Charles University. He left the university three years later, started a proper theatrical training and decided to pursue acting as a career. During this stage of the training he was able to take part in few theatrical productions in Prague. <br> In 2017 he moved to Los Angeles to get a proper on-camera acting training which he received in form of individual classes. After further consideration, research and interviews he decided to adopt a method technique for his future work, following the footsteps of his role models Daniel Day-Lewis, Javier Bardem or Joaquin Phoenix.</p>         
