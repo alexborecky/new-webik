@@ -27,7 +27,7 @@
         <h2>Films to watch</h2>
         <div class="film-row flex">
           <a @click="untoldModal ()" class="thumb-snap">
-            <filmThumbnail class="untold-pieces" 
+            <filmThumbnail
               filmTitle="Untold Pieces"
               thumbnail="https://ik.imagekit.io/alexborecky/personal_web/Full_HD-min_96VrddI2e.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660911454350"
               status="Coming 2022"
