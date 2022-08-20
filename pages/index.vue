@@ -80,16 +80,18 @@
           actionLine="Coming 2022"
           tagOne="Drama, Comedy"
           year="2022"
+          imdbLink="https://www.imdb.com/title/tt15158082/?ref_=fn_al_tt_1"
+          instaLink="https://www.instagram.com/untoldpiecesfilm/"
           description="After learning about his mother's death, Casey is left with feelings of guilt and confusion as he finds himself relieved about the news. With his friend Jenny, he is trying to find out what is an appropriate reaction to someone's death."
         />
         <!-- <div class="close-cover" @click="untoldModal ()"></div> -->
-        <a class="modal-close flex center" @click="untoldModal ()">
-        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M25 7L7 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M25 25L7 7" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-          CLOSE INFO
-        </a>
+          <a class="modal-close flex center" @click="untoldModal ()">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25 7L7 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M25 25L7 7" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+            CLOSE INFO
+          </a>
         </div>
         <!-- ORIGIN -->
         <div class="modal flex middle column" v-show="oriModal">
@@ -100,6 +102,8 @@
           actionLine="Watch now"
           tagOne="Drama"
           year="2021"
+          imdbLink="https://www.imdb.com/title/tt10544116/?ref_=nm_knf_i2"
+          instaLink=""
           description="Three friends, that had known each other since they were little kids, have decided to spend a night out together. Leo, a person that relies heavily on their friendship, is realising how much he has been lacking behind in his life when he sees his how much his friends grew as people, outside their little circle. This makes Leo reconsider his approach to life and also makes him think about how much relying on the friendship has hold him back."
         />
         <!-- <div class="close-cover" @click="originModal ()"></div> -->
@@ -185,7 +189,7 @@ export default {
       z-index: 1000;
       background-size: cover;
       background-position: center;
-      background-image: url(https://ik.imagekit.io/alexborecky/personal_web/Screenshot_2022-08-04_at_13.31.08__2__K6sLJnHWP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1659616722559);
+      background-image: url(https://ik.imagekit.io/alexborecky/personal_web/Screenshot_2022-08-20_at_13.59.49__2__mwXGsHNNH.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661008367821);
     }
     h1 {
       position: absolute;
