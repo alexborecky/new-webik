@@ -1,7 +1,7 @@
 <template>
     <div class="film-thumbnail flex" :style="{backgroundImage: 'url('+ thumbnail +')'}">
         <div class="cover"></div>
-        <div class="film-toolbar">
+        <div class="film-toolbar flex column">
             <h3>{{filmTitle}}</h3>
             <div class="info-bar flex">
                 <a :href="filmLink"><img src="https://ik.imagekit.io/alexborecky/personal_web/Play_KB_xemX-n.png?ik-sdk-version=javascript-1.4.3&updatedAt=1659622281663" alt="">{{status}}</a>
@@ -33,6 +33,7 @@
     .film-toolbar {
         margin: 32px;
         z-index: 100;
+        text-align: left;
         .info-bar {
             margin-top: 8px;
             width: 100%;

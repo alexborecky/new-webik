@@ -317,11 +317,24 @@ export default {
     @media (max-width: 1680px) {
         height: 24vh;
     }
-    .thumb-snap {
+    button {
       width: 40%;
       border-radius: 8px;
       cursor: pointer;
       height: 100%;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      &:first-child {
+        .info-bar {
+          a:first-child {
+            opacity: .4;
+            img {
+              display: none;
+            }
+          }
+        }
+      }
     }
   }
   .more-teaser {
