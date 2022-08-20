@@ -26,21 +26,21 @@
       <div class="films hero flex column" id="films">
         <h2>Films to watch</h2>
         <div class="film-row flex">
-          <a @click="untoldModal ()" class="thumb-snap">
+          <button @click="untoldModal ()" class="thumb-snap">
             <filmThumbnail
               filmTitle="Untold Pieces"
               thumbnail="https://ik.imagekit.io/alexborecky/personal_web/Full_HD-min_96VrddI2e.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660911454350"
               status="Coming 2022"
             />
-           </a> 
+           </button> 
 
-          <a @click="originModal ()" class="thumb-snap">
+          <button @click="originModal ()" class="thumb-snap">
             <filmThumbnail 
               filmTitle="Origin"
               thumbnail="https://ik.imagekit.io/alexborecky/personal_web/1000x563-min_FfsKVX7ac.png?ik-sdk-version=javascript-1.4.3&updatedAt=1659616805474"
               status="Watch now"
             />
-          </a>
+          </button>
           <div class="more-teaser flex middle">
             <p>More coming</p>
           </div>
