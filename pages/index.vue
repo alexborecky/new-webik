@@ -53,9 +53,10 @@
           <img src="https://ik.imagekit.io/alexborecky/personal_web/IMG_4350-min_3TFlJnsLT.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1659616811632" alt="">
         </div>
         <hr>
-        <div class="description">
+        <div class="description flex column">
           <p>Award winning director and actor Alexandr Borecky, currently based in Prague is starting to make his way to the industry despite his family's non-artistic background. His debut as a director and producer can be seen in his short film Origin, with which he has won several awards and now follows up with another project Untold Pieces which is planned to be released in late 2022.</p>
-          <a class="close-button" target="_blank" href="https://www.imdb.com/name/nm8879254/?ref_=tt_cl_t_2">Read whole bio</a>
+          <a class="close-button flex center" target="_blank" href="https://www.imdb.com/name/nm8879254/?ref_=tt_cl_t_2">Read whole bio <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </div>
 
@@ -189,7 +190,7 @@ export default {
       z-index: 1000;
       background-size: cover;
       background-position: center;
-      background-image: url(https://ik.imagekit.io/alexborecky/personal_web/Screenshot_2022-08-20_at_13.59.49__2__mwXGsHNNH.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661008367821);
+      background-image: url(https://ik.imagekit.io/alexborecky/personal_web/Screenshot_2022-08-20_at_13.59.49__2_-2_rUkeLmhUR.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661079740790);
     }
     h1 {
       position: absolute;
@@ -401,11 +402,6 @@ export default {
       text-align: left;
       opacity: .8;
     }
-    .close-button {
-      background-color: rgba($color: #fff, $alpha: .16) !important; 
-      color: #fff !important;
-      font-weight: 700 !important;
-    }
   }
   @media (max-width: 550px) {
     flex-flow: column;
@@ -531,15 +527,21 @@ export default {
 }
 
 .close-button {
-  padding: 8px 16px;
-  background-color: transparent !important;
-  border: solid 1px rgba($color: #fff, $alpha: .24) !important;
+  margin: 16px 0;
   color: rgba($color: #fff, $alpha: .8) !important;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 400;
-  width: 160px;
   text-align: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+  transition: .3s ease;
+  svg {
+    margin-left: 8px;
+  }
+  &:hover {
+    opacity: .64;
+  }
 }
 
 .contact {
